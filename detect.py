@@ -132,7 +132,7 @@ def compare_slopes(img,lines):
 				if np.isnan(intersect_x) == False and np.isinf(intersect_x) == False and np.isinf(intersect_y) == False:
 					cv2.circle(img,(int(intersect_x),int(intersect_y)), 3, (0,0,255), -1)
 def CaptureImage():
-	cap = cv2.VideoCapture(1)
+	cap = cv2.VideoCapture(0) #Choose proper webcam input
 	while(True):
 		ret, frame = cap.read()
 		oldframe = frame
